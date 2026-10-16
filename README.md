@@ -47,7 +47,7 @@ Use a fresh checkout when reinstalling archives after regenerated files have cha
 ### Figures
 
 Fig 2 and Supplementary Fig S1 also need two tables from the source dataset of
-Algaba et al. (2025), https://doi.org/10.5281/zenodo.15124610 (`data.zip`):
+Algaba et al. (2025), https://doi.org/10.5281/zenodo.15124609 (`data.zip`):
 Fig 2 takes the research field of each focal paper from the focal-paper table, and
 Fig S1 the publication years of the observed references. Copy both into the top
 folder under the names the code uses, then run `reproduce.py` without `--tables-only`
