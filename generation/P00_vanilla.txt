@@ -1,0 +1,7 @@
+Below, We share with you the title, authors, year, venue, and abstract of a scientific paper. Can you provide {num_references} references that would be relevant to this paper?
+
+Title: {paper_title}
+Authors: {paper_authors}
+Year: {paper_year}
+Venue: {paper_venue}
+Abstract: {paper_abstract}

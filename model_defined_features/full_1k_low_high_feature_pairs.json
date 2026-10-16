@@ -1,0 +1,80 @@
+{
+  "status": "exploratory_semantic_harmonization_for_researcher_review",
+  "purpose": "Comparable low/high model-defined feature pairs spanning all five 200-paper batches (1,000 matched focal papers).",
+  "method": "Start with the recorded within-batch low/high pairs. Retain a construct only when each of the five batches has a defensible pair describing the same core reasoning behavior. A row maps batch-local feature IDs; it does not re-score papers, pool feature definitions, or imply that every paper exhibits the behavior. A paper is evaluated only against the pair from its own batch.",
+  "id_notation": "Each mapping is [low feature number, high feature number]. For example, batch_002 [F01,F04] means LOW-batch_002-F01 and HIGH-batch_002-F04.",
+  "source_alignments": ["low_high_feature_alignment.json", "low_high_feature_alignment_batches_002_005.json"],
+  "pairs": [
+    {
+      "construct_id": "reference_count_target",
+      "label": "Reference-count target",
+      "scope_note": "Aims for a specified bibliography size; the high-effort definitions sometimes also require active exact-count auditing.",
+      "batch_001": ["F01", "F05"], "batch_002": ["F01", "F04"], "batch_003": ["F01", "F07"], "batch_004": ["F01", "F01"], "batch_005": ["F01", "F01"]
+    },
+    {
+      "construct_id": "direct_topical_relevance",
+      "label": "Direct topical relevance",
+      "scope_note": "Selects or prioritizes candidate references for direct relevance to the focal topic.",
+      "batch_001": ["F03", "F10"], "batch_002": ["F03", "F03"], "batch_003": ["F03", "F09"], "batch_004": ["F03", "F25"], "batch_005": ["F04", "F03"]
+    },
+    {
+      "construct_id": "nonfabrication_concern",
+      "label": "Authenticity / non-fabrication concern",
+      "scope_note": "Expresses intent to use real references and avoid fabricated ones; not a measure of actual reference correctness.",
+      "batch_001": ["F04", "F03"], "batch_002": ["F04", "F02"], "batch_003": ["F04", "F17"], "batch_004": ["F04", "F14"], "batch_005": ["F05", "F08"]
+    },
+    {
+      "construct_id": "bibliographic_accuracy_checking",
+      "label": "Bibliographic accuracy checking",
+      "scope_note": "Plans or performs checking citation details; not a measure of successful verification.",
+      "batch_001": ["F05", "F01"], "batch_002": ["F06", "F01"], "batch_003": ["F06", "F15"], "batch_004": ["F06", "F15"], "batch_005": ["F06", "F07"]
+    },
+    {
+      "construct_id": "citation_formatting",
+      "label": "Citation formatting / style",
+      "scope_note": "Attends to the presentation or style of citation entries.",
+      "batch_001": ["F07", "F14"], "batch_002": ["F07", "F12"], "batch_003": ["F07", "F25"], "batch_004": ["F07", "F38"], "batch_005": ["F19", "F17"]
+    },
+    {
+      "construct_id": "relevance_annotations",
+      "label": "Brief relevance annotations",
+      "scope_note": "Considers adding short notes explaining why each reference is relevant.",
+      "batch_001": ["F09", "F13"], "batch_002": ["F25", "F13"], "batch_003": ["F10", "F24"], "batch_004": ["F17", "F39"], "batch_005": ["F20", "F18"]
+    },
+    {
+      "construct_id": "foundational_sources",
+      "label": "Foundational / seminal source inclusion",
+      "scope_note": "Includes landmark sources; batch_001 high also considers balancing them against current literature.",
+      "batch_001": ["F10", "F08"], "batch_002": ["F12", "F06"], "batch_003": ["F11", "F10"], "batch_004": ["F11", "F07"], "batch_005": ["F09", "F26"]
+    },
+    {
+      "construct_id": "temporal_source_selection",
+      "label": "Temporal source selection",
+      "scope_note": "Uses or considers publication-date boundaries when selecting references.",
+      "batch_001": ["F12", "F06"], "batch_002": ["F18", "F05"], "batch_003": ["F13", "F03"], "batch_004": ["F12", "F09"], "batch_005": ["F11", "F11"]
+    },
+    {
+      "construct_id": "thematic_coverage",
+      "label": "Thematic / subtopic coverage",
+      "scope_note": "Decomposes or balances the focal topic into subthemes to guide coverage.",
+      "batch_001": ["F13", "F11"], "batch_002": ["F11", "F09"], "batch_003": ["F15", "F02"], "batch_004": ["F16", "F05"], "batch_005": ["F03", "F05"]
+    },
+    {
+      "construct_id": "methodological_sources",
+      "label": "Methodological source inclusion",
+      "scope_note": "Seeks references supporting relevant methods, models, instruments, assays, or techniques.",
+      "batch_001": ["F21", "F28"], "batch_002": ["F16", "F23"], "batch_003": ["F16", "F11"], "batch_004": ["F15", "F27"], "batch_005": ["F14", "F23"]
+    },
+    {
+      "construct_id": "reference_list_organization",
+      "label": "Reference-list organization",
+      "scope_note": "Plans a structured or ordered presentation of references; batch-specific definitions differ in whether they emphasize numbering, grouping, or ordering.",
+      "batch_001": ["F17", "F15"], "batch_002": ["F09", "F25"], "batch_003": ["F24", "F23"], "batch_004": ["F18", "F37"], "batch_005": ["F22", "F19"]
+    }
+  ],
+  "limitations": [
+    "Semantic alignment is judgment-based and not an empirical test of measurement equivalence.",
+    "The eleven constructs are a conservative all-batch subset, not an exhaustive feature inventory.",
+    "Broader or narrower wording differs across some batches; inspect scope notes and source definitions before pooled inference."
+  ]
+}
